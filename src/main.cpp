@@ -1,6 +1,5 @@
 #include <WiFi.h>
 #include "AsyncUDP.h"
-#include "brotli/decode.h"
 #include <Config.h>
 #include <FS.h>
 #include "SPIFFS.h"
@@ -29,7 +28,6 @@ bool debugMode = DEBUG_MODE;
 AsyncUDP udp;
 
 // Brotli decompression buffer
-#define BROTLI_DECOMPRESSION_BUFFER 3000
 uint8_t * compressed;
 TaskHandle_t brotliTask;
 size_t receivedLength;
