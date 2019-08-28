@@ -31,12 +31,16 @@ UDP_PORT
 
 MQTT_ENABLE is set to false by default. Only required if you need to register the ESP32 in an external controller.
 
-    /lib/Output/Output.h
+    /lib/pixels/PIXELS.h
 
 The number of leds in the stripe: 
 
-#define PIXELCOUNT 72
+`#define PIXELCOUNT 72`
 
 The data pin of the addressable leds:
 
-#define PIXELPIN 19
+`#define PIXELPIN 19`
+
+You can select RGBW by uncommenting the line:
+
+`//#define RGBW`
